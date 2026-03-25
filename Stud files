@@ -1,0 +1,26 @@
+import time
+import random
+
+print("🎮 Welcome to Shake Game!")
+print("👉 Press ENTER repeatedly to shake as fast as you can!")
+print("⏱ You have 5 seconds. Get ready...\n")
+
+input("Press ENTER to start...")
+
+start_time = time.time()
+score = 0
+
+while time.time() - start_time < 5:
+    input()  # Each ENTER press counts as a shake
+    score += 1
+
+print("\n⏹ Time's up!")
+print(f"🔥 Your Shake Score: {score}")
+
+# Feedback
+if score < 10:
+    print("😅 Try faster next time!")
+elif score < 20:
+    print("👍 Good job!")
+else:
+    print("🚀 Awesome shaking!")
